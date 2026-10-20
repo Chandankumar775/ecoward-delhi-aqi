@@ -206,7 +206,7 @@ export default function AboutPage() {
 
         <div className="mt-16 text-center">
           <Card className="inline-block border-0 shadow-lg bg-gradient-to-r from-slate-900 to-slate-800 text-white px-12 py-8">
-            <p className="text-lg font-medium mb-2">Built with dedication by Team Orchids</p>
+            <p className="text-lg font-medium mb-2">Built with dedication by Team EcoWard</p>
             <p className="text-slate-400 text-sm">EcoWard - Urban Air Quality Intelligence Platform v2.4.1</p>
           </Card>
         </div>
@@ -215,7 +215,7 @@ export default function AboutPage() {
       <footer className="gradient-hero text-white py-12 border-t-4 border-amber-500">
         <div className="container mx-auto px-4 text-center space-y-4">
           <p className="text-amber-400 font-bold tracking-widest uppercase">EcoWard Intelligence System</p>
-          <p className="text-xs text-slate-400">© 2025 EcoWard | Developed by Team Orchids | Government Environment Monitoring Initiative</p>
+          <p className="text-xs text-slate-400">© 2025 EcoWard | Developed by Team EcoWard | Government Environment Monitoring Initiative</p>
         </div>
       </footer>
     </div>

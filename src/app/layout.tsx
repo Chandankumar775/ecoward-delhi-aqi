@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { VisualEditsMessenger } from "orchids-visual-edits";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { AuthProvider } from "@/lib/auth-context";
 
@@ -34,7 +33,6 @@ export default function RootLayout({
             <AuthProvider>
               {children}
             </AuthProvider>
-            <VisualEditsMessenger />
           </ThemeProvider>
       </body>
     </html>
