@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# EcoWard
 
-First, run the development server:
+**Ward-level air quality intelligence for Delhi: see which wards are worst, why, and what the authorities are doing about it.**
+
+[Live dashboard](https://new-delhi-dashboard-eco-ward.vercel.app)
+
+<img src="docs/screenshots/home.webp" alt="EcoWard home: Ward-Level Air Quality Intelligence Dashboard" width="100%">
+
+</div>
+
+## What it does
+
+City-wide AQI hides the real picture: one industrial ward can be at 310 while a residential ward next to it is at 62. EcoWard breaks Delhi's air quality down by municipal ward. It is built for two audiences: citizens who want to report pollution, and the authorities who act on those reports.
+
+## Screens
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/wards.webp" alt="Ward health cards and heatmap"></td>
+    <td width="50%"><img src="docs/screenshots/charts.webp" alt="Pollution sources and AQI trend"></td>
+  </tr>
+  <tr>
+    <td><b>Ward health.</b> Per-ward AQI, PM2.5 and PM10, a health index, and a community pollution heatmap.</td>
+    <td><b>Why it's bad.</b> Pollution source attribution (vehicles, industry, construction dust, waste burning) and a 24-hour AQI trend.</td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/ranking.webp" alt="Area rankings"></td>
+    <td><img src="docs/screenshots/grievance.webp" alt="Report pollution"></td>
+  </tr>
+  <tr>
+    <td><b>Area rankings.</b> Delhi localities ranked by air quality, with the cleanest area highlighted.</td>
+    <td><b>Citizen portal.</b> Report a pollution incident with your GPS location and track earlier reports.</td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/authority.webp" alt="Government command center"></td>
+    <td><img src="docs/screenshots/policies.webp" alt="Policy framework"></td>
+  </tr>
+  <tr>
+    <td><b>Government command center.</b> Wards with the most citizen signals, category clustering, the action logbook and impact monitor.</td>
+    <td><b>Policy framework.</b> The acts and policies that apply, such as the Clean Air Act and waste management rules.</td>
+  </tr>
+</table>
+
+<p align="center"><img src="docs/screenshots/mobile.webp" alt="EcoWard on a phone" width="280"></p>
+
+The header has an English/Hindi switch, text size controls and a dark mode.
+
+## Data
+
+The numbers in this build are demo data from `src/lib/data.ts`. No live sensor feed is connected yet.
+
+## Tech stack
+
+Next.js 15 (App Router), React, TypeScript, Tailwind CSS, shadcn/ui, Recharts, Framer Motion. Deployed on Vercel.
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Routes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Route | Page |
+|---|---|
+| `/` | Live dashboard |
+| `/ranking` | Ward and area rankings |
+| `/grievance` | Citizen pollution reports |
+| `/authority` | Government command center |
+| `/policies` | Policy framework |
+| `/about` | About |
+| `/login` | Authority sign-in |
