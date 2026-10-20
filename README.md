@@ -1,6 +1,6 @@
 <div align="center">
 
-# EcoWard
+<img src="docs/brand/wordmark.webp" alt="EcoWard" width="100%">
 
 **Ward-level air quality intelligence for Delhi: see which wards are worst, why, and what the authorities are doing about it.**
 
